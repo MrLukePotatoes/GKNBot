@@ -7,19 +7,19 @@ client.on("ready", () => {
 
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
 
-  client.user.setActivity(`GalacticKraft`);
+  client.user.setActivity(`FiverX ESports`);
 });
 
 client.on("guildCreate", guild => {
 
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setActivity(`GalacticKraft`);
+  client.user.setActivity(`FiverX ESports`);
 });
 
 client.on("guildDelete", guild => {
 
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setActivity(`GalacticKraft`);
+  client.user.setActivity(`FiverX ESports`);
 });
 
 
@@ -64,38 +64,38 @@ client.on("message", async message => {
 
   }
 
-  if(command === "serverip") {
-  message.channel.send('galactickraft.us.to | Coming Soon')
+  if(command === "clan") {
+  message.channel.send('FVX | FiverX ESports')
   }
 
-  if(command === "ip") {
-  message.channel.send('galactickraft.us.to | Coming Soon')
+  if(command === "bot") {
+  message.channel.send('FVX°B0KNU')
   }
 
   if(command === "rules") {
     message.channel.send({embed: {
     color: 3447003,
     author: {
-      name: 'GalacticKraft Network Rules:',
+      name: 'Rules:',
       icon_url: client.user.avatarURL
     },
     fields: [{
-        name: "Bullying",
-        value: "We have a no tolerance policy for any form of bullying, threatening or harrasment."
+        name: "Trashtalk",
+        value: "Just Trashtalk for fun."
       },
       {
-        name: "Advertising",
-        value: "No advertising in any way, shape or form."
+        name: "Spy",
+        value: "We dont need spy for this server."
       },
       {
         name: "Impersonation",
-        value: "No impersonation of any server member in any way."
+        value: "No impersonation of any clan member in any way."
       }
     ],
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
-      text: "GalacticKraft Network",
+      text: "FiverX Esports",
     }
   }
 });
@@ -121,12 +121,12 @@ client.on("message", async message => {
         value: "Bans the specified member from the server."
       },
       {
-        name: "serverip",
-        value: "Posts the server IP address."
+        name: "clan",
+        value: "What is the clan?."
       },
       {
-        name: "ip",
-        value: "Posts the server IP address."
+        name: "bot",
+        value: "Posts about the Bot."
       },
       {
         name: "rules",
@@ -144,7 +144,7 @@ client.on("message", async message => {
     timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
-      text: "GalacticKraft Network",
+      text: "FiverX ESports",
     }
   }
 });
